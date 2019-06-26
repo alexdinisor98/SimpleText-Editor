@@ -8,4 +8,5 @@ available font types and font sizes.
 -- a textArea with available contextualMenu with copy, paste, selectAll and delete
 options.
 -- an outliner which shows the tree structure of the opened XML file with specific 
-icons for expandable, expanded and leaf nodes of the tree, using a customized DOMTreeModel.
+icons for expandable, expanded and leaf nodes of the tree, using a customized 
+DOMTreeModel.
