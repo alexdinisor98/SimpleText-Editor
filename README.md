@@ -9,4 +9,6 @@ available font types and font sizes.
 options.
 -- an outliner which shows the tree structure of the opened XML file with specific 
 icons for expandable, expanded and leaf nodes of the tree, using a customized 
-DOMTreeModel.
+DOMTreeModel and updates along the user's modifications.
+--  a label which notifies the user regarding the errors and warning alongside 
+his/hers modifications of the XML file,
