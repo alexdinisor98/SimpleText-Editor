@@ -1,6 +1,8 @@
 package com.oxygenxml;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -15,6 +17,7 @@ import java.io.OutputStreamWriter;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 
@@ -47,6 +50,7 @@ public class SimpleTextEditorFrame extends JFrame {
 				if (returnValue == JFileChooser.APPROVE_OPTION) {
 					File selectedFile = jfc.getSelectedFile();
 					openFileAction(selectedFile);
+
 				} else {
 					// User cancelled
 				}
@@ -66,22 +70,19 @@ public class SimpleTextEditorFrame extends JFrame {
 		setJMenuBar(menuBar);
 
 		MyToolBar toolbar = new MyToolBar(textArea, openListener, saveListener);
+		
+		// add the toolBar, textArea and updatesLabel in frame.
 		getContentPane().add(toolbar, BorderLayout.NORTH);
-
 		getContentPane().add(textArea, BorderLayout.CENTER);
+		getContentPane().add(textArea.getUpdatesLabel(), BorderLayout.SOUTH);
 
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent we) {
 				System.exit(0);
 			}
 		});
-
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-	}
-
-	public static void main(String[] args) {
-		new SimpleTextEditorFrame();
 	}
 
 	/**
@@ -136,6 +137,10 @@ public class SimpleTextEditorFrame extends JFrame {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+	}
+	
+	public static void main(String[] args) {
+		new SimpleTextEditorFrame();
 	}
 
 }
