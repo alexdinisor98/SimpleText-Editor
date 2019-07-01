@@ -23,3 +23,6 @@ DOMTreeModel and updates along the user's modifications.
 --  a label which notifies the user regarding the errors and warning 
 alongside 
 his/her modifications of the XML file.
+
+-- XPath expression field which selects the matching nodes 
+or node-sets in the opened XML doc.
