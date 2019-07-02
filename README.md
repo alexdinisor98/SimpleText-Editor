@@ -26,4 +26,4 @@ his/her modifications of the XML file.
 
 -- XPath expression field which selects the matching nodes 
 or node-sets in the opened XML doc and outputs them in a 
-label using a custom ListCellRenderer.
+JList using a custom ListCellRenderer.
