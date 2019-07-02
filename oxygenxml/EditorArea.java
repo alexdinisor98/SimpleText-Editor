@@ -72,10 +72,7 @@ public class EditorArea extends JPanel implements TextEditor {
 	private String filenameString;
 
 	private Document doc;
-	/**
-	 * Friendly for tests
-	 */
-	XPathPanel xPanel;
+	private XPathPanel xPanel;
 
 	/**
 	 * EditorArea includes textArea, scrollPane and contextual menu.
@@ -288,13 +285,11 @@ public class EditorArea extends JPanel implements TextEditor {
 	}
 
 	class XPathPanel extends JPanel {
-		/**
-		 * Friendly for tests
-		 */
-		JTextField xpathExpressionField = new JTextField(40);
-		JList<Node> resultlist = null;
+
+		private JTextField xpathExpressionField = new JTextField(40);
+		private JList<Node> resultlist = null;
 		private DefaultListModel<Node> dataListModel = new DefaultListModel<>();
-		EvaluateListener evaluateListener = new EvaluateListener(dataListModel);
+		private EvaluateListener evaluateListener = new EvaluateListener(dataListModel);
 
 		public XPathPanel() {
 
@@ -348,7 +343,5 @@ public class EditorArea extends JPanel implements TextEditor {
 		public String getText() {
 			return xpathExpressionField.getText();
 		}
-
 	}
-
 }
