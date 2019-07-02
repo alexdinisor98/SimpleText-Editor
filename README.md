@@ -1,6 +1,6 @@
-# SimpleText-Editor
+# XMLText-Editor
 
-SimpleText Editor in Java Swing 
+XMLText Editor in Java Swing 
 
 My editor app implements a basic editor for files, including:
 
